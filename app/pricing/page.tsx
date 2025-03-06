@@ -1,7 +1,7 @@
 import React from "react";
 
 const PrincingPage = () => {
-  return <div>PrincingPage</div>;
+  return <div className="h-screen">PrincingPage</div>;
 };
 
 export default PrincingPage;

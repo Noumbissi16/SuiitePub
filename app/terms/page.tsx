@@ -1,9 +1,7 @@
 import React from 'react'
 
 const TermsPage = () => {
-  return (
-    <div>TermsPage</div>
-  )
+  return <div className="h-screen">TermsPage</div>;
 }
 
 export default TermsPage

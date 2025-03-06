@@ -1,9 +1,7 @@
 import React from 'react'
 
 const PrivacyPage = () => {
-  return (
-    <div>PrivacyPage</div>
-  )
+  return <div className="h-screen">PrivacyPage</div>;
 }
 
 export default PrivacyPage

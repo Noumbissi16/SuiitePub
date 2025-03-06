@@ -1,7 +1,7 @@
 import React from "react";
 
 const IntegrationsPage = () => {
-  return <div>IntegrationsPage</div>;
+  return <div className="h-screen">IntegrationsPage</div>;
 };
 
 export default IntegrationsPage;

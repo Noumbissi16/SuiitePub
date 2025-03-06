@@ -21,7 +21,7 @@ export default function RootLayout({
            antialiased font-sans bg-gray-100 `}
       >
         <ResponsiveHeader />
-        <div className="w-[90vw] max-w-7xl max-lg:max-w-xl mx-auto">
+        <div className="w-[80vw] max-w-6xl  mx-auto">
           {children}
         </div>
         <Footer />

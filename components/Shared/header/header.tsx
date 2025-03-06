@@ -12,14 +12,14 @@ import Image from "next/image";
 const HeaderComponent = () => {
   const [isMobileNavBarOpen, setIsMobileNavBarOpen] = useState(false);
   return (
-    <header className="relative w-full h-20 bg-white">
-      <div className=" mx-auto px-4 flex items-center justify-between h-full">
-        <nav className="flex items-center justify-between gap-6 w-full md:w-7xl  mx-auto  h-full">
+    <header className="sticky top-0 w-full h-20 bg-white">
+      <div className=" mx-auto  flex items-center justify-between h-full">
+        <nav className="flex items-center justify-between gap-6  mx-auto   h-full max-w-6xl  w-[80vw]">
           <Link href="/" className="flex items-center">
-            <div className="w-40 h-10 relative flex items-center justify-center gap-2">
-              <Image src={'/logo.svg'} alt={'logo'} width={40} height={40} />
-              Direct <br />NetWork
-              
+            <div className=" h-10 relative flex items-center justify-center gap-2">
+              <Image src={"/logo.svg"} alt={"logo"} width={40} height={40} />
+              Direct <br />
+              NetWork
             </div>
           </Link>
           <div className="flex justify-center items-center gap-5 h-full max-lg:hidden">
@@ -36,7 +36,7 @@ const HeaderComponent = () => {
             <NavbarElement title="Integrations" href="/integrations" />
             <NavbarElement
               title="Documentation"
-              href ={""}
+              href={""}
               FlyoutContent={DocumentationContent}
               isFullPageFlyout={false}
             />
