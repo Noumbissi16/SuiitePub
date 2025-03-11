@@ -41,6 +41,9 @@ export const routing = defineRouting({
       en: "/login",
       fr: "/connexion",
     },
+    " ": " ",
+    "#": "#",
+    "":""
   },
 });
 

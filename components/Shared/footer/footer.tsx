@@ -26,7 +26,7 @@ const Footer = () => {
                 title="Company"
                 link={[
                   { href: "/about", title: "About Us" },
-                  { href: "", title: "Blog" },
+                  { href: " ", title: "Blog" },
                   { href: "#", title: "Customer Support" },
                   { href: "#", title: "Careers" },
                 ]}
@@ -37,7 +37,7 @@ const Footer = () => {
                 link={[
                   { href: "/integrations", title: "Integrations" },
                   { href: "/pricing", title: "Pricing" },
-                  { href: "", title: "Developer" },
+                  { href: " ", title: "Developer" },
                 ]}
               />
               <LegalLinks
