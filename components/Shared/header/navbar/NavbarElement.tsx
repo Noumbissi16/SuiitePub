@@ -61,7 +61,7 @@ const NavBarElement = ({
       }}
     >
       <Link
-        href={FlyoutContent ? "" : href}
+        href={FlyoutContent ? "#" : href as any}
         onClick={() => setOpen(true)}
         className="cursor-pointer lg:hidden h-full flex items-center gap-1 font-bold text-[18px] justify-center w-fit max-lg:justify-between max-lg:w-full"
       >
@@ -74,7 +74,7 @@ const NavBarElement = ({
         )}
       </Link>
       <Link
-        href={href}
+        href={href as any}
         className="max-lg:hidden h-full flex items-center gap-1 font-bold text-[18px] justify-center w-fit max-lg:justify-between max-lg:w-full"
       >
         {title}
