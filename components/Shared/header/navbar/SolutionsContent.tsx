@@ -60,17 +60,17 @@ const SolutionsContent = () => {
               </Link>
             </li>
             <li>
-              <Link href="/careers" className="font-bold text-lg">
+              <Link href=" " className="font-bold text-lg">
                 Careers
               </Link>
             </li>
             <li>
-              <Link href="/blog" className="font-bold text-lg">
+              <Link href=" " className="font-bold text-lg">
                 Blog
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="font-bold text-lg">
+              <Link href=" " className="font-bold text-lg">
                 Contact Us
               </Link>
             </li>
