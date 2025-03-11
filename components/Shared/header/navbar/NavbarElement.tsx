@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, ChevronLeft, ChevronRight, X } from "lucide-react";
+import { Link } from "@/i18n/navigation";
 
 const NavBarElement = ({
   title,
@@ -59,8 +60,8 @@ const NavBarElement = ({
         if (window.innerWidth > responsiveDesiredWidth) setOpen(false);
       }}
     >
-      <a
-        href={FlyoutContent ? undefined : href}
+      <Link
+        href={FlyoutContent ? "" : href}
         onClick={() => setOpen(true)}
         className="cursor-pointer lg:hidden h-full flex items-center gap-1 font-bold text-[18px] justify-center w-fit max-lg:justify-between max-lg:w-full"
       >
@@ -71,8 +72,8 @@ const NavBarElement = ({
             <ChevronRight className="w-4 h-4 hidden max-lg:block" />
           </>
         )}
-      </a>
-      <a
+      </Link>
+      <Link
         href={href}
         className="max-lg:hidden h-full flex items-center gap-1 font-bold text-[18px] justify-center w-fit max-lg:justify-between max-lg:w-full"
       >
@@ -83,7 +84,7 @@ const NavBarElement = ({
             <ChevronRight className="w-4 h-4 hidden max-lg:block" />
           </>
         )}
-      </a>
+      </Link>
 
       <AnimatePresence>
         {showFlyout && (

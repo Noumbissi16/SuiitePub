@@ -1,5 +1,5 @@
 import { Menu } from "lucide-react";
-import Link from "next/link";
+import {Link} from "@/i18n/navigation";
 import React, { useState } from "react";
 import NavbarElement from "./navbar/NavbarElement";
 import ProductContent from "./navbar/ProductContent";
@@ -8,6 +8,7 @@ import AnimatedButton from "../../ui/animated-button";
 import { Button } from "../../ui/button";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
+import LocaleSwitcher from "../LanguageSelector/LocaleSwitcher";
 
 const HeaderComponent = () => {
   const [isMobileNavBarOpen, setIsMobileNavBarOpen] = useState(false);
@@ -49,6 +50,7 @@ const HeaderComponent = () => {
               containerElementStyle="max-lg:hidden"
             />
             <AnimatedButton btnText="Login" btnType="black" />
+            <LocaleSwitcher />
             <Button
               variant={"outline"}
               onClick={() => setIsMobileNavBarOpen(!isMobileNavBarOpen)}

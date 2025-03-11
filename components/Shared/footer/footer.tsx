@@ -35,7 +35,7 @@ const Footer = () => {
               <LegalLinks
                 title="Support"
                 link={[
-                  { href: "/integration", title: "Integrations" },
+                  { href: "/integrations", title: "Integrations" },
                   { href: "/pricing", title: "Pricing" },
                   { href: "", title: "Developer" },
                 ]}

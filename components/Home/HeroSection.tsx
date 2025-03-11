@@ -50,7 +50,7 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        <div className="relative z-0 h-[400px] md:h-[600px] rounded-lg overflow-hidden">
+        {/* <div className="relative z-0 h-[400px] md:h-[600px] rounded-lg overflow-hidden">
           <Image
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%20%2832%29-iwRhvihwpx8M56OD050ZjXKsqqUNOK.png"
             alt="Direct7 Networks Dashboard"
@@ -58,7 +58,7 @@ const HeroSection = () => {
             className="object-contain"
             priority
           />
-        </div>
+        </div> */}
       </div>
     </main>
   );
