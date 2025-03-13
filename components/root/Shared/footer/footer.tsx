@@ -7,7 +7,7 @@ import LegalLinks from "./LegalLinks";
 const Footer = () => {
   return (
     <footer className="w-full max-h-fit min-h-[calc(100vh-100px)] bg-white">
-      <main className=" max-w-6xl  w-[80vw]  mx-auto text-center">
+      <main className=" max-w-6xl  w-[80vw] xl:max-w-7xl mx-auto text-center">
         <section className="xl:py-[3.875rem] py-10 flex items-center justify-between max-xl:flex-col max-xl:justify-start max-xl:items-start max-xl:gap-5 max-sm:gap-5">
           <div className="h-10  flex items-center justify-center gap-2">
             <Image src={"/logo.svg"} alt={"logo"} width={40} height={40} />

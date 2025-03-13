@@ -1,21 +1,22 @@
 import { Menu } from "lucide-react";
-import {Link} from "@/i18n/navigation";
+import { Link, useRouter } from "@/i18n/navigation";
 import React, { useState } from "react";
 import NavbarElement from "./navbar/NavbarElement";
 import ProductContent from "./navbar/ProductContent";
 import SolutionsContent from "./navbar/SolutionsContent";
-import AnimatedButton from "../../ui/animated-button";
-import { Button } from "../../ui/button";
+import AnimatedButton from "../../../ui/animated-button";
+import { Button } from "../../../ui/button";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import LocaleSwitcher from "../LanguageSelector/LocaleSwitcher";
 
 const HeaderComponent = () => {
+  const router = useRouter();
   const [isMobileNavBarOpen, setIsMobileNavBarOpen] = useState(false);
   return (
     <header className="sticky top-0 w-full h-20 bg-white">
       <div className=" mx-auto  flex items-center justify-between h-full">
-        <nav className="flex items-center justify-between gap-6  mx-auto   h-full max-w-6xl  w-[80vw]">
+        <nav className="flex items-center justify-between gap-6  mx-auto   h-full max-w-6xl xl:max-w-7xl w-[80vw]">
           <Link href="/" className="flex items-center">
             <div className=" h-10 relative flex items-center justify-center gap-2">
               <Image src={"/logo.svg"} alt={"logo"} width={40} height={40} />
@@ -23,7 +24,7 @@ const HeaderComponent = () => {
               NetWork
             </div>
           </Link>
-          <div className="flex justify-center items-center gap-5 h-full max-lg:hidden">
+          <div className="flex justify-center items-center gap-5 h-full max-xl:hidden">
             <NavbarElement
               title="Product"
               FlyoutContent={ProductContent}
@@ -47,14 +48,22 @@ const HeaderComponent = () => {
             <NavbarElement
               title="Contact Sales"
               href="/contact"
-              containerElementStyle="max-lg:hidden"
+              containerElementStyle="max-xl:hidden"
             />
-            <AnimatedButton btnText="Login" btnType="black" />
-            <LocaleSwitcher />
+            <AnimatedButton
+              btnText="Login"
+              btnType="black"
+              onClick={() => {
+                router.push("/signin");
+              }}
+            />
+            <div className="max-xl:hidden">
+              <LocaleSwitcher />
+            </div>
             <Button
               variant={"outline"}
               onClick={() => setIsMobileNavBarOpen(!isMobileNavBarOpen)}
-              className="hidden max-lg:block"
+              className="hidden max-xl:block"
             >
               <Menu />
             </Button>
@@ -96,6 +105,10 @@ const HeaderComponent = () => {
             </div>
             <div className=" flex justify-between items-center p-4 py-6 border-b cursor-pointer">
               <NavbarElement title="Pricing" href="/pricing" />
+            </div>
+            <div className="flex justify-between items-center p-4 py-6 border-b">
+              <p>Language</p>
+              <LocaleSwitcher />
             </div>
             <div className=" flex justify-between items-center p-4 py-6 ">
               <AnimatedButton

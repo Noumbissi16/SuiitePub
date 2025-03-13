@@ -1,22 +1,26 @@
 import { ArrowRight, Check } from "lucide-react";
 import Image from "next/image";
 import React from "react";
-import { Button } from "../ui/button";
-import AnimatedButton from "../ui/animated-button";
+import { Button } from "../../ui/button";
+import AnimatedButton from "../../ui/animated-button";
 
 const HeroSection = () => {
   return (
-    <main className="mx-auto px-4 py-8 md:py-4">
-      <div className="grid lg:grid-cols-2 gap-12 items-center">
-        <div className="space-y-8">
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-gray-900">
-            Effective Business Messaging API
+    <main className="mx-auto  min-h-[calc(100vh-80px)] grid place-items-center max-lg:py-20 max-sm:py-16">
+      <div className="flex justify-between items-center max-lg:flex-col max-lg:gap-20  ">
+        <div className="space-y-3 w-1/2 max-lg:w-full">
+          <h1 className="text-8xl/21 font-bold tracking-tight text-gray-600 max-md:text-7xl">
+            Effective Business
+            <br />
+            <span className="text-gray-800 text-7xl/25 font-bold tracking-tight max-md:text-6xl">
+              Messaging API
+            </span>
           </h1>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-800">
             Enhance your business with D7's scalable API for global marketing,
             engagement, and authentication.
           </p>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-4 max-sm:flex-col max-sm:mt-4">
             <AnimatedButton btnText="Try for Free" btnType="primary" />
             <AnimatedButton btnText=" Book a Demo" btnType="secondary" />
           </div>
@@ -50,15 +54,16 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-        {/* <div className="relative z-0 h-[400px] md:h-[600px] rounded-lg overflow-hidden">
+        <div className="flex w-1/2 max-lg:w-full">
           <Image
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%20%2832%29-iwRhvihwpx8M56OD050ZjXKsqqUNOK.png"
             alt="Direct7 Networks Dashboard"
-            fill
+            width={800}
+            height={800}
             className="object-contain"
             priority
           />
-        </div> */}
+        </div>
       </div>
     </main>
   );

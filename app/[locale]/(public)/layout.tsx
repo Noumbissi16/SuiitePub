@@ -1,4 +1,5 @@
 import "@/app/[locale]/(root)/globals.css";
+import RightSideComponent from "@/components/public/right-side-banner";
 import { routing } from "@/i18n/routing";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
@@ -11,20 +12,22 @@ export default async function PublicLayout({
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
 }) {
-  // Ensure that the incoming `locale` is valid
   const { locale } = await params;
   if (!routing.locales.includes(locale as any)) {
     notFound();
   }
 
-  // Providing all messages to the client
-  // side is the easiest way to get started
   const messages = await getMessages();
   return (
     <html lang={locale}>
       <body>
         <NextIntlClientProvider messages={messages}>
-          <main>{children}</main>
+          <main className="min-h-screen flex justify-between max-md:items-center ">
+            <div className="flex flex-col justify-center w-full max-md:w-[85%] mx-auto">
+              {children}
+            </div>
+            <RightSideComponent />
+          </main>
         </NextIntlClientProvider>
       </body>
     </html>
