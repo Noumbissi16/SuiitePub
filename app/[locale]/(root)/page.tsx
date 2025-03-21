@@ -17,8 +17,10 @@ export default function HomePage() {
   const t = useTranslations("HomePage");
   return (
     <>
-      <HeroSection />
-      <ScrolAnimatedSection />
+      <div className="page-width">
+        <HeroSection />
+        <ScrolAnimatedSection />
+      </div>
     </>
   );
 }

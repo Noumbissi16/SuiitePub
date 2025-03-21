@@ -1,3 +1,4 @@
+"use client";
 import { Menu } from "lucide-react";
 import { Link, useRouter } from "@/i18n/navigation";
 import React, { useState } from "react";
@@ -16,7 +17,7 @@ const HeaderComponent = () => {
   return (
     <header className="sticky top-0 w-full h-20 bg-white">
       <div className=" mx-auto  flex items-center justify-between h-full">
-        <nav className="flex items-center justify-between gap-6  mx-auto   h-full max-w-6xl xl:max-w-7xl w-[80vw]">
+        <nav className="flex items-center justify-between gap-6 h-full page-width">
           <Link href="/" className="flex items-center">
             <div className=" h-10 relative flex items-center justify-center gap-2">
               <Image src={"/logo.svg"} alt={"logo"} width={40} height={40} />

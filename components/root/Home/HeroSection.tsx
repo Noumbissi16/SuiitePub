@@ -6,7 +6,7 @@ import AnimatedButton from "../../ui/animated-button";
 
 const HeroSection = () => {
   return (
-    <main className="mx-auto  min-h-[calc(100vh-80px)] grid place-items-center max-lg:py-20 max-sm:py-16">
+    <main className="mx-auto  min-h-[calc(9k0vh-80px)] pt-56 pb-40 grid place-items-center max-lg:py-20 max-sm:py-16">
       <div className="flex justify-between items-center max-lg:flex-col max-lg:gap-20  ">
         <div className="space-y-3 w-1/2 max-lg:w-full">
           <h1 className="text-8xl/21 font-bold tracking-tight text-gray-600 max-md:text-7xl">

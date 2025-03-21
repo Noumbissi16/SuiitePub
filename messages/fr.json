@@ -2,5 +2,9 @@
     "HomePage": {
         "title": "Salut tout le monde !",
         "about": "Aller à la page à propos"
+    },
+    "PricingPage": {
+        "title": "Tarification",
+        "description": "Page de tarification pour Suiite-E Pub Solution"
     }
 }

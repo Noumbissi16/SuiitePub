@@ -6,6 +6,7 @@ import { routing } from "@/i18n/routing";
 import ResponsiveHeader from "@/components/root/Shared/header/ResponsiveHeader";
 import { Metadata } from "next";
 import Footer from "@/components/root/Shared/footer/footer";
+import SignUpInvitationSection from "@/components/root/Shared/SignUpInvitationSection";
 
 export const metadata: Metadata = {
   title: "Solution for online advertisement",
@@ -31,10 +32,13 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className=" relative antialiased font-sans bg-gray-100">
+      <body className=" relative antialiased font-sans bg-gray-50">
         <NextIntlClientProvider messages={messages}>
           <ResponsiveHeader />
-          <main className="w-[80vw] max-w-6xl xl:max-w-7xl mx-auto">{children}</main>
+          <main className="page-wlidth">
+            {children}
+          </main>
+          <SignUpInvitationSection />
           <Footer />
         </NextIntlClientProvider>
       </body>

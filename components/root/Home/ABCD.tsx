@@ -4,8 +4,8 @@ import React from 'react'
 
 const ABCD = () => {
   return (
-    <div>
-      {" "}
+    <div className='w-full'>
+     
       <div className="space-y-6">
         <div className="inline-flex items-center gap-2 text-orange-600 bg-orange-50 px-4 py-2 rounded-full">
           <MessageCircle className="w-5 h-5" />
