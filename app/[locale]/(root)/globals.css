@@ -127,10 +127,38 @@
   }
 }
 @layer components{
-
   .page-width{
-   @apply w-[90vw] max-w-6xl xl:max-w-7xl mx-auto
+   @apply w-[90vw] max-w-7xl xl:max-w-6xl mx-auto
   }
+
+  .hero-main{
+    @apply mx-auto pt-20 pb-16 grid place-items-center max-lg:py-14 max-sm:py-10
+  }
+
+  .hero-content-flex{
+    @apply flex justify-between items-center max-lg:flex-col max-lg:gap-12 h-full
+  }
+
+  .hero-content-flex-right{
+    @apply space-y-3 w-1/2 max-lg:w-full
+  }
+
+  .hero-content-flex-left{
+    @apply flex items-center justify-center w-[48%] max-lg:w-full h-full
+  }
+
+  .hero-content-flex-right .title{
+    @apply text-8xl/21 font-bold tracking-tight text-gray-600 max-md:text-7xl
+  }
+
+  .hero-content-flex-right .title span{
+    @apply text-gray-800 text-7xl/25 font-bold tracking-tight max-md:text-6xl
+  }
+
+  .hero-content-flex-right .subtitle{
+    @apply text-xl text-gray-800
+  }
+
   .pricing-card-spacer{
     @apply pb-6 mb-6 border-b border-gray-200 space-y-1;
   }

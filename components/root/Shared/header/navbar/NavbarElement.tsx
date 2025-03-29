@@ -61,7 +61,7 @@ const NavBarElement = ({
       }}
     >
       <Link
-        href={FlyoutContent ? "#" : href as any}
+        href={FlyoutContent ? "#" : (href as any)}
         onClick={() => setOpen(true)}
         className="cursor-pointer lg:hidden h-full flex items-center gap-1 font-bold text-[18px] justify-center w-fit max-lg:justify-between max-lg:w-full"
       >
@@ -91,7 +91,7 @@ const NavBarElement = ({
           <motion.div
             className={` bg-white absolute z-50 top-16 max-lg:top-24  ${
               isFullPageFlyout
-                ? "w-full h-[400px] max-lg:h-screen left-1/2 -translate-x-1/2 border-b"
+                ? "w-full h-fit pb-8 max-lg:h-screen left-1/2 -translate-x-1/2 border-b"
                 : "w-fit"
             }`}
             custom={typeof window !== "undefined" ? window.innerWidth : 0}
@@ -100,10 +100,10 @@ const NavBarElement = ({
             exit="exit"
             variants={mergedVariants}
           >
-            <div className="px-8 py-2 ">
+            <div className="px-8 pb-8 overflow-y-scroll h-[calc(100vh-150px)] xl:h-fit">
               <div
                 onClick={() => setOpen(false)}
-                className="max-lg:flex items-center justify-start gap-2 hidden"
+                className=" max-lg:flex items-center justify-start gap-2 hidden overflow-y-scroll"
               >
                 <ChevronLeft />
                 Back

@@ -4,14 +4,18 @@ import React from "react";
 
 const ProductContent = () => {
   return (
-    <div>
-      <div className="container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div className="col-span-2">
-          <h3 className="text-sm font-medium text-gray-500 mb-6">PRODUCTS</h3>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <>
+      <div className=" w-[70%] h-full mx-auto pt-12 flex justify-between items-start gap-8 max-xl:flex-col max-xl:w-full max-xl:pt-4 max-xl:gap-4 overflow-scroll">
+        <div className="w-2/3 max-xl:w-full">
+          <h3 className="text-lg font-bold text-gray-500 mb-1 px-6 max-xl:px-0">
+            PRODUCTS
+          </h3>
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-2 max-xl:gap-1">
             {/* SMS */}
-            <div className="flex gap-4">
+            <Link
+              href="/sms"
+              className="flex gap-4 hover:bg-gray-100 transition-all ease-in  p-6 max-xl:px-4 max-xl:py-2 max-xl:my-4 rounded-sm cursor-pointer"
+            >
               <div className="w-10 h-10 bg-orange-100 rounded-full flex items-center justify-center text-orange-500">
                 <MessageCircle className="w-5 h-5" />
               </div>
@@ -21,10 +25,13 @@ const ProductContent = () => {
                   SMS solutions to enhance direct business communication.
                 </p>
               </div>
-            </div>
+            </Link>
 
             {/* WhatsApp API */}
-            <div className="flex gap-4">
+            <Link
+              href="/whatsapp-business-api"
+              className="flex gap-4 hover:bg-gray-100 transition-all ease-in  p-6 max-xl:px-4 max-xl:py-2 max-xl:my-4 rounded-sm cursor-pointer"
+            >
               <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center text-green-500">
                 <MessageCircle className="w-5 h-5" />
               </div>
@@ -34,10 +41,13 @@ const ProductContent = () => {
                   WhatsApp API for seamless customer engagement.
                 </p>
               </div>
-            </div>
+            </Link>
 
             {/* Verify API */}
-            <div className="flex gap-4">
+            <Link
+              href="/otp-verification-api"
+              className="flex gap-4 hover:bg-gray-100 transition-all ease-in  p-6 max-xl:px-4 max-xl:py-2 max-xl:my-4 rounded-sm cursor-pointer"
+            >
               <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center text-red-500">
                 <Shield className="w-5 h-5" />
               </div>
@@ -47,23 +57,12 @@ const ProductContent = () => {
                   Secure user authentication with OTPs for transactions.
                 </p>
               </div>
-            </div>
-
-            {/* Viber API */}
-            <div className="flex gap-4">
-              <div className="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center text-purple-500">
-                <MessageCircle className="w-5 h-5" />
-              </div>
-              <div>
-                <h3 className="font-bold text-lg mb-1">Viber API</h3>
-                <p className="text-gray-600">
-                  Boost engagement with Viber messaging for businesses.
-                </p>
-              </div>
-            </div>
-
+            </Link>
             {/* Number Lookup API */}
-            <div className="flex gap-4">
+            <Link
+              href="/number-lookup-api"
+              className="flex gap-4 hover:bg-gray-100 transition-all ease-in  p-6 max-xl:px-4 max-xl:py-2 max-xl:my-4 rounded-sm cursor-pointer"
+            >
               <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-500">
                 <Phone className="w-5 h-5" />
               </div>
@@ -73,7 +72,7 @@ const ProductContent = () => {
                   Verify and validate phone numbers instantly.
                 </p>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
 
@@ -103,7 +102,7 @@ const ProductContent = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

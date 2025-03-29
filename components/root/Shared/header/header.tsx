@@ -77,9 +77,9 @@ const HeaderComponent = () => {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 10 }}
-            className="bg-white p-4 font-bold text-[18px] w-full"
+            className="bg-white h-screen p-4 font-bold text-[18px] w-full xl:hidden"
           >
-            <div className=" flex justify-between items-center p-4 py-6 border-b cursor-pointer">
+            <div className="flex justify-between items-center p-4 py-6 border-b cursor-pointer">
               <NavbarElement
                 title="Product"
                 FlyoutContent={ProductContent}
