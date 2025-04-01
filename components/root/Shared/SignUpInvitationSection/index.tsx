@@ -4,7 +4,7 @@ import React from "react";
 
 const SignUpInvitationSection = () => {
   return (
-    <section className="bg-blue-100 py-20  text-center mt-16">
+    <section className="bg-blue-100 py-20  text-center ">
       <div className="w-full max-w-[1200px] mx-auto flex flex-col items-center">
         <h1 className="text-6xl font-bold  mb-8 text-center max-sm:text-3xl">
           Sign Up and Try Suiite-E

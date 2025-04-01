@@ -11,7 +11,7 @@ const PayForMessagesSection = () => {
         <motion.h1
           initial={{
             opacity: 0,
-            y: 20,
+            y: 8,
           }}
           viewport={{ once: true, amount: 1 }}
           whileInView={{
@@ -22,7 +22,7 @@ const PayForMessagesSection = () => {
               duration: 0.5,
             },
           }}
-          className="text-6xl self-center font-bold lg:max-w-3xl mb-8 text-center max-md:text-5xl max-sm:text-3xl"
+          className="text-6xl self-center font-bold lg:max-w-3xl mb-8 text-center max-md:text-5xl max-sm:text-3xl "
         >
           Pay Only for What You Use
         </motion.h1>
@@ -39,7 +39,7 @@ const PayForMessagesSection = () => {
               y: 0,
               transition: {
                 ease: "easeOut",
-                delay: 0.5,
+                delay: 0.25,
                 duration: 0.5,
               },
             }}
@@ -61,7 +61,7 @@ const PayForMessagesSection = () => {
               y: 0,
               transition: {
                 ease: "easeOut",
-                delay: 0.75,
+                delay: 0.5,
                 duration: 0.5,
               },
             }}

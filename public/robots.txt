@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://suiite-pub.vercel.app/fr
+
+# Sitemaps
+Sitemap: https://suiite-pub.vercel.app/fr/sitemap.xml

@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const OtpHeroSection = () => {
   return (
-    <main className="hero-main">
+    <main className="hero-main page-width">
       <section className="hero-content-flex">
         <article className="hero-content-flex-right">
           <section className="flex items-center gap-1 mb-4">

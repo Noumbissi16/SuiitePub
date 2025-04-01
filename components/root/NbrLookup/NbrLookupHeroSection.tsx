@@ -4,7 +4,7 @@ import React from 'react'
 
 const NbrLookupHeroSection = () => {
   return (
-    <main className="hero-main">
+    <main className="hero-main page-width">
       <section className="hero-content-flex">
         <article className="hero-content-flex-right">
           <section className="flex items-center gap-2 mb-4">

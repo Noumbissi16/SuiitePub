@@ -136,7 +136,7 @@
   }
 
   .hero-content-flex{
-    @apply flex justify-between items-center max-lg:flex-col max-lg:gap-12 h-full
+    @apply flex justify-between items-center max-lg:flex-col max-lg:gap-12 h-full w-full
   }
 
   .hero-content-flex-right{

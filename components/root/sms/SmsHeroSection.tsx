@@ -4,7 +4,7 @@ import React from "react";
 
 const SmsHeroSection = () => {
   return (
-    <main className="hero-main">
+    <main className="hero-main page-width">
       <section className="hero-content-flex">
         <article className="hero-content-flex-right">
           <section className="flex items-center gap-1 mb-4">
@@ -25,9 +25,13 @@ const SmsHeroSection = () => {
           <p className="subtitle mb-10">
             Expand your business reach with a scalable SMS platform designed for
             instant global communication.
-                  </p>
-                  
-                  <AnimatedButton btnText="Book a Demo" btnType="primary" btnClassName="h-14"/>
+          </p>
+
+          <AnimatedButton
+            btnText="Book a Demo"
+            btnType="primary"
+            btnClassName="h-14"
+          />
         </article>
         <div className="hero-content-flex-left">
           <Image

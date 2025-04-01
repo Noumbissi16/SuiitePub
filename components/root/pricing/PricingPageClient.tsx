@@ -27,10 +27,10 @@ const flyoutVariants = {
 };
 
 const pricingCards = [
-  { component: SmsPricingCard, delay: 0.6 },
-  { component: WhatsappPricingCard, delay: 1.2 },
-  { component: VerifyApiPricingCard, delay: 1.8 },
-  { component: NumberLookupPricingCard, delay: 2.4 },
+  { component: SmsPricingCard, delay: 0.4 },
+  { component: WhatsappPricingCard, delay: 0.8 },
+  { component: VerifyApiPricingCard, delay: 1.2 },
+  { component: NumberLookupPricingCard, delay: 1.6 },
 ];
 
 const PricingPageClient = () => {
@@ -67,7 +67,7 @@ const PricingPageClient = () => {
             variants={flyoutVariants}
             initial="closed"
             whileInView="open"
-            viewport={{ once: true, amount: 0.75 }}
+            viewport={{ once: true, amount: 0.4 }}
             exit="closed"
             custom={delay}
             className="w-[30%] max-xl:w-[45%] max-md:w-full"
