@@ -28,9 +28,9 @@ export default async function PublicLayout({
           <SideBarStoreProvider>
             <main className="flex flex-col">
               <DashboardTopbar />
-              <div className="flex h-[calc(100vh-40px)]">
+              <div className="flex h-[calc(100vh-64px)]">
                 <Sidebar />
-                <div className="w-full">{children}</div>
+                <div className="w-full mt-6 ml-6">{children}</div>
               </div>
             </main>
           </SideBarStoreProvider>
