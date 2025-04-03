@@ -32,7 +32,7 @@ const AnimatedButton = ({
             } 
             ${btnType === "secondary" && "bg-white border-gray-300"}
             ${btnType === "black" && "bg-black text-white border-black "} 
-             font-semibold py-[10px] px-[5px] pl-5 rounded-full flex items-center justify-center cursor-pointer border
+             font-semibold py-[7px] px-[5px] pl-5 rounded-full flex items-center justify-center cursor-pointer border
             ${btnClassName}
             
             `

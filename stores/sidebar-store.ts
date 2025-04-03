@@ -1,9 +1,8 @@
-import { createStore } from "zustand/vanilla"
-
+import { createStore } from "zustand/vanilla";
 
 export type SideBarOpenState = {
-    isSideBarOpen: boolean
-}
+  isSideBarOpen: boolean;
+};
 
 export type SideBarOpenActions = {
   setIsSideBarOpen: (isOpen: boolean) => void;
@@ -12,13 +11,14 @@ export type SideBarOpenActions = {
 export type SideBarOpenStore = SideBarOpenState & SideBarOpenActions;
 
 export const defaultInitState: SideBarOpenState = {
-    isSideBarOpen: false,
-}
+  isSideBarOpen: false,
+};
 
-export const createSideBarOpenStore = (initState: SideBarOpenState = defaultInitState) => {
-    return createStore<SideBarOpenStore>((set) => ({
-        ...initState,
-        setIsSideBarOpen: (isOpen: boolean) => set({ isSideBarOpen: isOpen }),
-    
-    }))
-}
+export const createSideBarOpenStore = (
+  initState: SideBarOpenState = defaultInitState
+) => {
+  return createStore<SideBarOpenStore>((set) => ({
+    ...initState,
+    setIsSideBarOpen: (isOpen: boolean) => set({ isSideBarOpen: isOpen }),
+  }));
+};

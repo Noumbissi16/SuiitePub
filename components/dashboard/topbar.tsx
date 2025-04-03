@@ -2,6 +2,7 @@
 import { PanelRightOpen, PanelLeftOpen } from "lucide-react";
 import React from "react";
 import { useSideBarStore } from "@/providers/sidebar-store-provider";
+import LocaleSwitcher from "../root/Shared/LanguageSelector/LocaleSwitcher";
 
 const DashboardTopbar = () => {
   const { isSideBarOpen, setIsSideBarOpen } = useSideBarStore((state) => state);
@@ -22,7 +23,9 @@ const DashboardTopbar = () => {
         )}
       </div>
       <div className="flex h-full items-center gap-2">
-        <div></div>
+        <div>
+          <LocaleSwitcher />
+        </div>
         <div className="h-full border-1 border-slate-300" />
         <div className="text-xl w-10 h-10 flex items-center justify-center rounded-full bg-blue-800 text-white">
           S

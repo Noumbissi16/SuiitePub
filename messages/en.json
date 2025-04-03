@@ -6,5 +6,21 @@
     "PricingPage": {
         "title": "Pricing",
         "description": "Pricing page for Suiite-E Pub Solution"
+    },
+    "SignUpPage": {
+        "title": "Sign Up",
+        "description": "Sign up page for Suiite-E Pub Solution"
+    },
+    "SignInPage": {
+        "title": "Sign In",
+        "description": "Sign in page for Suiite-E Pub Solution"
+    },
+    "DashboardPage": {
+        "title": "Dashboard",
+        "description": "Dashboard page for Suiite-E Pub Solution"
+    },
+    "SmsPage": {
+        "title": "SMS",
+        "description": "SMS page for Suiite-E Pub Solution"
     }
 }

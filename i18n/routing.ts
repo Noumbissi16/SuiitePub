@@ -71,6 +71,30 @@ export const routing = defineRouting({
       en: "/whatsapp-chatbot",
       fr: "/chatbot-whatsapp",
     },
+    "/api-tokens": {
+      en: "/api-tokens",
+      fr: "/api-tokens",
+    },
+    "/dashboard": {
+      en: "/dashboard",
+      fr: "/tableau-de-bord",
+    },
+    "/whatsapp-meta/getting-started": {
+      en: "/whatsapp-meta/getting-started",
+      fr: "/whatsapp-meta/getting-started",
+    },
+    "/whatsapp-meta/numbers": {
+      en: "/whatsapp-meta/numbers",
+      fr: "/whatsapp-meta/numbers",
+    },
+    "/whatsapp-meta/settings": {
+      en: "/whatsapp-meta/settings",
+      fr: "/whatsapp-meta/settings",
+    },
+    "/whatsapp-meta/template": {
+      en: "/whatsapp-meta/template",
+      fr: "/whatsapp-meta/template",
+    },
   },
 });
 
