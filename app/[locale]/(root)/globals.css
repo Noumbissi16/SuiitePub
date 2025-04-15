@@ -127,6 +127,13 @@
   }
 }
 @layer components{
+  .hero-bg{
+    /* background-image: url('/bg.png'); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;    
+  }
   .page-width{
    @apply w-[90vw] max-w-7xl xl:max-w-6xl mx-auto
   }

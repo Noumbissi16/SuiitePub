@@ -38,7 +38,7 @@ export default async function LocaleLayout({
           <main className="page-wlidth">
             {children}
           </main>
-          <SignUpInvitationSection />
+          {/* <SignUpInvitationSection /> */}
           <Footer />
         </NextIntlClientProvider>
       </body>

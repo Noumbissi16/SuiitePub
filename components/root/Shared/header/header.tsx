@@ -15,7 +15,7 @@ const HeaderComponent = () => {
   const router = useRouter();
   const [isMobileNavBarOpen, setIsMobileNavBarOpen] = useState(false);
   return (
-    <header className="sticky top-0 w-full h-20 bg-white">
+    <header className="sticky top-0 w-full h-20 bg-white z-40">
       <div className=" mx-auto  flex items-center justify-between h-full">
         <nav className="flex items-center justify-between gap-6 h-full page-width">
           <Link href="/" className="flex items-center">

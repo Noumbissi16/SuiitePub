@@ -37,7 +37,7 @@ const ScrolAnimatedSection = () => {
   }, [isInView2]);
 
   return (
-    <div className="h-fit max-md:h-fit ">
+    <div className="h-fit max-md:h-fit page-width">
       <div className="large-screen-layout max-md:hidden flex justify-between  ">
         <div className="w-[40%]">
           <div

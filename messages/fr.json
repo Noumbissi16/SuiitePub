@@ -1,7 +1,102 @@
 {
     "HomePage": {
         "title": "Salut tout le monde !",
-        "about": "Aller à la page à propos"
+        "about": "Aller à la page à propos",
+        "hero": {
+            "title": "Boostez votre entreprise avec le marketing WhatsApp",
+            "subtitle": "Suiite-Pub permet aux entreprises Camerounaises de se connecter directement avec leurs clients via des campagnes WhatsApp automatisées.",
+            "primaryButton": "Essayer gratuitement",
+            "secondaryButton": "Réserver une démo"
+        },
+        "problemSection": {
+            "title": "Problèmes",
+            "subtitle": "Quels sont les principaux problèmes des entreprises Camerounaises ?",
+            "problems": {
+                "sectionTitle": "Problème",
+                "withoutSolution": "Sans notre solution",
+                "list": {
+                    "0": "Faibles taux d'engagement",
+                    "1": "Fatigue publicitaire",
+                    "2": "Cécité aux bannières",
+                    "3": "Coûts publicitaires élevés",
+                    "4": "Personnalisation limitée",
+                    "5": "Communication retardée",
+                    "6": "Gestion complexe des campagnes",
+                    "7": "Problèmes de sécurité",
+                    "8": "Portée limitée",
+                    "9": "Support client inefficace"
+                }
+            },
+            "solutions": {
+                "withSolution": "Avec notre solution",
+                "list": {
+                    "0": {
+                        "title": "Taux d'engagement élevés",
+                        "subtitle": "Augmentez vos taux d'interaction jusqu'à 80%"
+                    },
+                    "1": {
+                        "title": "Messages personnalisés",
+                        "subtitle": "Adaptez les communications pour chaque segment d'audience"
+                    },
+                    "2": {
+                        "title": "Campagnes rentables",
+                        "subtitle": "Réduisez les coûts marketing jusqu'à 40%"
+                    },
+                    "3": {
+                        "title": "Communication en temps réel",
+                        "subtitle": "Messagerie instantanée sans délai"
+                    },
+                    "4": {
+                        "title": "Gestion simplifiée des campagnes",
+                        "subtitle": "Gérez toutes les campagnes depuis un seul tableau de bord"
+                    },
+                    "5": {
+                        "title": "Sécurité renforcée",
+                        "subtitle": "Protection des données de niveau entreprise"
+                    },
+                    "6": {
+                        "title": "Portée élargie",
+                        "subtitle": "Connectez-vous avec des audiences sur tous les canaux"
+                    },
+                    "7": {
+                        "title": "Flux de travail automatisés",
+                        "subtitle": "Gagnez du temps grâce à l'automatisation intelligente"
+                    },
+                    "8": {
+                        "title": "Support multimédia enrichi",
+                        "subtitle": "Partagez facilement images, vidéos et documents"
+                    },
+                    "9": {
+                        "title": "Support client intégré",
+                        "subtitle": "Assistance client automatisée 24h/24 et 7j/7"
+                    }
+                }
+            }
+        },
+        "dashboard": {
+            "title": "Votre tableau de bord est le cœur de votre campagne",
+            "description": "Notre tableau de bord vous offre tous les outils nécessaires pour gérer vos campagnes, suivre les performances et optimiser vos stratégies pour un impact maximal."
+        },
+        "steps": {
+            "sectionTitle": "Étapes",
+            "headline": "Lancer votre campagne publicitaire n'a jamais été aussi simple",
+            "step1": {
+                "title": "Choisir un Pack",
+                "description": "Sélectionnez le pack parfait adapté à vos besoins et à votre budget"
+            },
+            "step2": {
+                "title": "Remplir le Formulaire",
+                "description": "Fournissez les informations nécessaires sur votre campagne"
+            },
+            "step3": {
+                "title": "Effectuer le Paiement",
+                "description": "Payez en toute sécurité pour démarrer votre campagne"
+            }
+        },
+        "pricing": {
+            "title": "Tarification",
+            "description": "Choisissez le plan qui vous convient le mieux."
+        }
     },
     "PricingPage": {
         "title": "Tarification",
@@ -23,5 +118,4 @@
         "title": "SMS",
         "description": "Page SMS pour Suiite-E Pub Solution"
     }
-
 }

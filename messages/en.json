@@ -1,7 +1,102 @@
 {
     "HomePage": {
         "title": "Hello world!",
-        "about": "Go to the about page"
+        "about": "Go to the about page",
+        "hero": {
+            "title": "Boost Your Business with WhatsApp Marketing",
+            "subtitle": "Suiite-Pub empowers Cameroonian businesses to connect directly with customers through automated WhatsApp campaigns.",
+            "primaryButton": "Try for Free",
+            "secondaryButton": "Book a Demo"
+        },
+        "problemSection": {
+            "title": "Problems",
+            "subtitle": "What are the main problems of Cameroonian businesses?",
+            "problems": {
+                "sectionTitle": "Problem",
+                "withoutSolution": "Without Our Solution",
+                "list": {
+                    "0": "Low Engagement Rates",
+                    "1": "Ad Fatigue",
+                    "2": "Banner Blindness",
+                    "3": "High Advertising Costs",
+                    "4": "Limited Personalization",
+                    "5": "Delayed Communication",
+                    "6": "Complex Campaign Management",
+                    "7": "Security Concerns",
+                    "8": "Limited Reach",
+                    "9": "Inefficient Customer Support"
+                }
+            },
+            "solutions": {
+                "withSolution": "With Our Solution",
+                "list": {
+                    "0": {
+                        "title": "High Engagement Rates",
+                        "subtitle": "Boost your interaction rates up to 80%"
+                    },
+                    "1": {
+                        "title": "Personalized Messaging",
+                        "subtitle": "Tailor communications for each audience segment"
+                    },
+                    "2": {
+                        "title": "Cost-Effective Campaigns",
+                        "subtitle": "Reduce marketing costs by up to 40%"
+                    },
+                    "3": {
+                        "title": "Real-Time Communication",
+                        "subtitle": "Instant messaging with zero delay"
+                    },
+                    "4": {
+                        "title": "Simplified Campaign Management",
+                        "subtitle": "Manage all campaigns from one dashboard"
+                    },
+                    "5": {
+                        "title": "Enhanced Security",
+                        "subtitle": "Enterprise-grade protection for your data"
+                    },
+                    "6": {
+                        "title": "Broader Reach",
+                        "subtitle": "Connect with audiences across all channels"
+                    },
+                    "7": {
+                        "title": "Automated Workflows",
+                        "subtitle": "Save time with smart automation"
+                    },
+                    "8": {
+                        "title": "Rich Media Support",
+                        "subtitle": "Share images, videos, and documents easily"
+                    },
+                    "9": {
+                        "title": "Integrated Customer Support",
+                        "subtitle": "24/7 automated customer assistance"
+                    }
+                }
+            }
+        },
+        "dashboard": {
+            "title": "Your dashboard is the heart of your campaign",
+            "description": "Our dashboard provides you with all the tools you need to manage your campaigns, track performance, and optimize your strategies for maximum impact."
+        },
+        "steps": {
+            "sectionTitle": "Steps",
+            "headline": "Starting your publicity campaign has never been easier",
+            "step1": {
+                "title": "Choose a Package",
+                "description": "Select the perfect package that suits your business needs and budget"
+            },
+            "step2": {
+                "title": "Fill in the Form",
+                "description": "Provide the necessary details about your campaign requirements"
+            },
+            "step3": {
+                "title": "Make Payment",
+                "description": "Complete your payment securely to start your campaign"
+            }
+        },
+        "pricing":{
+            "title": "Pricing",
+            "description": "Choose a plan that fits your needs."
+        }
     },
     "PricingPage": {
         "title": "Pricing",

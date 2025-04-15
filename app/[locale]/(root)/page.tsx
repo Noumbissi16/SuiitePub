@@ -1,26 +1,19 @@
-"use client";
-import { HeroSection, ScrolAnimatedSection } from "@/components/root/Home";
-import { useTranslations } from "next-intl";
-
-const fadeUpVariant = {
-  initial: { opacity: 0, y: 100 },
-  animate: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-    },
-  },
-};
+import {
+  DashboardImg,
+  HeroSection,
+  PricingHome,
+  ProblemsSection,
+  StepsSection,
+} from "@/components/root/Home";
 
 export default function HomePage() {
-  const t = useTranslations("HomePage");
   return (
     <>
-      <div className="page-width">
-        <HeroSection />
-        <ScrolAnimatedSection />
-      </div>
+      <HeroSection />
+      <ProblemsSection />
+      <DashboardImg />
+      <StepsSection />
+      <PricingHome />
     </>
   );
 }

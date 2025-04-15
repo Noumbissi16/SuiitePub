@@ -1,68 +1,31 @@
-import { Check } from "lucide-react";
-import Image from "next/image";
 import React from "react";
 import AnimatedButton from "../../ui/animated-button";
+import { useTranslations } from "next-intl";
+import {motion} from "framer-motion";
 
 const HeroSection = () => {
+  const t = useTranslations("HomePage");
   return (
-    <main className="hero-main">
-      <section className="hero-content-flex">
-        <article className="hero-content-flex-right">
-          <h1 className="title">
-            Effective Business
-            <br />
-            <span className="">
-              Messaging API
-            </span>
+    <main className="hero-bg max-md:h-fit bg-blue-50 ">
+      <section className="hero-main page-width ">
+        <article className="flex flex-col items-center gap-4 max-md:items-start">
+          <h1  className="text-7xl/17  font-bold tracking-tight max-md:text-6xl max-sm:text-4xl text-center md:max-w-4xl ">
+            {t("hero.title")}
           </h1>
-          <p className="subtitle">
-            Enhance your business with D7's scalable API for global marketing,
-            engagement, and authentication.
+          <p className="text-xl max-sm:text-lg text-gray-800 mt-4 md:max-w-xl text-center ">
+            {t("hero.subtitle")}
           </p>
-          <div className="flex flex-wrap gap-4 max-sm:flex-col max-sm:mt-4">
-            <AnimatedButton btnText="Try for Free" btnType="primary" />
-            <AnimatedButton btnText=" Book a Demo" btnType="secondary" />
+          <div className="flex flex-wrap gap-4 max-md:flex-col mt-4 max-md:w-full">
+            <AnimatedButton
+              btnText={t("hero.primaryButton")}
+              btnType="primary"
+            />
+            <AnimatedButton
+              btnText={t("hero.secondaryButton")}
+              btnType="secondary"
+            />
           </div>
-          <div className="grid sm:grid-cols-3 gap-6 pt-8">
-            <div className="flex items-start gap-2">
-              <div className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
-                <Check className="w-3 h-3 text-blue-600" />
-              </div>
-              <div>
-                <h3 className="font-medium">Free Credits</h3>
-                <p className="text-sm text-gray-500">Start with no cost</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-2">
-              <div className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
-                <Check className="w-3 h-3 text-blue-600" />
-              </div>
-              <div>
-                <h3 className="font-medium">Unlimited Credit</h3>
-                <p className="text-sm text-gray-500">Validity</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-2">
-              <div className="w-5 h-5 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
-                <Check className="w-3 h-3 text-blue-600" />
-              </div>
-              <div>
-                <h3 className="font-medium">Top Notch Integration</h3>
-                <p className="text-sm text-gray-500">Assistance</p>
-              </div>
-            </div>
-          </div>
-        </article>
-        <div className="hero-content-flex-left">
-          <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%20%2832%29-iwRhvihwpx8M56OD050ZjXKsqqUNOK.png"
-            alt="Direct7 Networks Dashboard"
-            width={900}
-            height={900}
-            className="object-contain"
-            priority
-          />
-        </div>
+        </article> 
       </section>
     </main>
   );
