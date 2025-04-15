@@ -1,7 +1,7 @@
 {
     "HomePage": {
-        "title": "Salut tout le monde !",
-        "about": "Aller à la page à propos",
+        "title": "Les campagne publicitaire n'a jamais été aussi simple",
+        "description": "Suiite-E Pub Solution est une plateforme de marketing numérique qui permet aux entreprises de créer et de gérer des campagnes publicitaires sur WhatsApp.",
         "hero": {
             "title": "Boostez votre entreprise avec le marketing WhatsApp",
             "subtitle": "Suiite-Pub permet aux entreprises Camerounaises de se connecter directement avec leurs clients via des campagnes WhatsApp automatisées.",
@@ -104,11 +104,68 @@
     },
     "SignUpPage": {
         "title": "Inscription",
-        "description": "Page d'inscription pour Suiite-E Pub Solution"
+        "description": "Page d'inscription pour Suiite-E Pub Solution",
+        "alreadyHaveAccount": "Vous avez deja un compte ? ",
+        "signIn": "Se connecter",
+        "signupForm": {
+            "username": "Nom d'utilisateur",
+            "email": "Adresse e-mail",
+            "password": "Mot de passe",
+            "confirmPassword": "Confirmer le mot de passe",
+            "placeholder": {
+                "username": "Entrez votre nom d'utilisateur",
+                "email": "Entrez votre adresse e-mail",
+                "password": "Entrez un mot de passe sécurisé",
+                "confirmPassword": "Confirmez votre mot de passe",
+                "enterpriseRoleLabel": "Rôle dans l'entreprise",
+                "admin": "Administrateur",
+                "user": "Utilisateur"
+            },
+            "privacyNotice": "En m'inscrivant, j'accepte les conditions générales",
+            "privacyPolicy": "Politique de confidentialité et",
+            "termsOfService": "Conditions d'utilisation de",
+            "companyName": "Suiite-E Pub Solution",
+            "submit": "Inscription",
+            "submitting": "Inscription en cours..."
+        },
+        "validation": {
+            "email": "Veuillez entrer une adresse e-mail valide.",
+            "username": "Le nom d'utilisateur doit comporter au moins 3 caractères.",
+            "passwordLength": "Le mot de passe doit comporter au moins 8 caractères.",
+            "passwordFormat": "Le mot de passe doit contenir au moins une majuscule, une minuscule, un chiffre et un caractère spécial (@$!%*?&).",
+            "confirmPasswordLength": "La confirmation du mot de passe doit comporter au moins 8 caractères.",
+            "passwordMismatch": "Les mots de passe ne correspondent pas.",
+            "enterpriseRole": "Veuillez sélectionner un rôle."
+        }
+       
     },
     "SignInPage": {
         "title": "Connexion",
-        "description": "Page de connexion pour Suiite-E Pub Solution"
+        "description": "Page de connexion pour Suiite-E Pub Solution",
+        "dontHaveAccount": "Vous n'avez pas de compte ? ",
+        "signUp": "S'inscrire",
+        "signInForm": {
+            "email": {
+                "label": "Email",
+                "placeholder": "Entrez votre adresse email"
+            },
+            "password": {
+                "label": "Mot de passe",
+                "placeholder": "Entrez votre mot de passe"
+            },
+            "enterpriseRoleLabel": "Rôle dans l'entreprise",
+            "admin": "Administrateur",
+            "user": "Utilisateur",
+            "button": {
+                "submit": "Se connecter",
+                "loading": "Connexion en cours..."
+            }
+        },
+       "validation": {
+        "invalid_email": "Veuillez entrer une adresse email valide.",
+        "password_min": "Le mot de passe doit contenir au moins 8 caractères.",
+        "enterpriseRole": "Veuillez sélectionner un rôle."
+    }
     },
     "DashboardPage": {
         "title": "Tableau de bord",

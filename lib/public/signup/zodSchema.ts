@@ -3,28 +3,34 @@ import { z } from "zod";
 const passwordRegex =
   /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
-export const signUpFormSchema = z
-  .object({
-    email: z.string().email({
-      message: "Please enter a valid email address.",
-    }),
-    username: z.string().min(3, {
-      message: "Username must be at least 3 characters.",
-    }),
-    password: z
-      .string()
-      .min(8, {
-        message: "Password must be at least 8 characters long.",
-      })
-      .regex(passwordRegex, {
-        message:
-          "Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character (@$!%*?&).",
+export const getSignUpFormSchema = (t: (key: string) => string) => {
+  return z
+    .object({
+      enterpriseRole: z.enum(["admin", "user"]),
+      email: z.string().email({
+        message: t("email"),
       }),
-    confirmPassword: z.string().min(8, {
-      message: "Confirm password must be at least 8 characters.",
-    }),
-  })
-  .refine((data) => data.password === data.confirmPassword, {
-    message: "Passwords do not match.",
-    path: ["confirmPassword"],
-  });
+      username: z.string().min(3, {
+        message: t("username"),
+      }),
+      password: z
+        .string()
+        .min(8, {
+          message: t("passwordLength"),
+        })
+        .regex(passwordRegex, {
+          message: t("passwordFormat"),
+        }),
+      confirmPassword: z.string().min(8, {
+        message: t("confirmPasswordLength"),
+      }),
+    })
+    .refine((data) => data.password === data.confirmPassword, {
+      message: t("passwordMismatch"),
+      path: ["confirmPassword"],
+    });
+};
+
+export type SignUpFormValues = z.infer<
+  Awaited<ReturnType<typeof getSignUpFormSchema>>
+>;

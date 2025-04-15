@@ -1,7 +1,7 @@
 {
     "HomePage": {
-        "title": "Hello world!",
-        "about": "Go to the about page",
+        "title": "Advertising campaigns have never been easier.",
+        "description": "Suite-E Pub Solution is a digital marketing platform that allows businesses to create and manage advertising campaigns on WhatsApp.",
         "hero": {
             "title": "Boost Your Business with WhatsApp Marketing",
             "subtitle": "Suiite-Pub empowers Cameroonian businesses to connect directly with customers through automated WhatsApp campaigns.",
@@ -93,7 +93,7 @@
                 "description": "Complete your payment securely to start your campaign"
             }
         },
-        "pricing":{
+        "pricing": {
             "title": "Pricing",
             "description": "Choose a plan that fits your needs."
         }
@@ -104,11 +104,66 @@
     },
     "SignUpPage": {
         "title": "Sign Up",
-        "description": "Sign up page for Suiite-E Pub Solution"
+        "description": "Sign up page for Suiite-E Pub Solution",
+        "alreadyHaveAccount": "Already have an account ? ",
+        "signIn": "Sign In",
+        "signupForm": {
+            "username": "Username",
+            "email": "Email Address",
+            "password": "Password",
+            "confirmPassword": "Confirm Password",
+            "placeholder": {
+                "username": "Enter your username",
+                "email": "Enter your email",
+                "password": "Enter a strong password",
+                "confirmPassword": "Confirm your password" ,
+                "enterpriseRoleLabel": "Enterprise Role",
+                "admin": "Admin",
+                "user": "User"
+                 
+            },
+            "privacyNotice": "By signing up, I agree to the",
+            "privacyPolicy": "Privacy Policy and",
+            "termsOfService": "Terms of Service of",
+            "companyName": "Suiite-E Pub Solution",
+            "submit": "Sign Up",
+            "submitting": "Signing up..."
+        },
+        "validation": {
+            "email": "Please enter a valid email address.",
+            "username": "Username must be at least 3 characters.",
+            "passwordLength": "Password must be at least 8 characters long.",
+            "passwordFormat": "Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character (@$!%*?&).",
+            "confirmPasswordLength": "Confirm password must be at least 8 characters.",
+            "passwordMismatch": "Passwords do not match.",
+            "enterpriseRole": "Please select a role."
+        }
     },
     "SignInPage": {
         "title": "Sign In",
-        "description": "Sign in page for Suiite-E Pub Solution"
+        "description": "Sign in page for Suiite-E Pub Solution",
+        "dontHaveAccount": "Don't have an account ? ",
+        "signUp": "Sign Up",
+        "signInForm": {
+            "email": {
+                "label": "Email",
+                "placeholder": "Enter your email"
+            },
+            "password": {
+                "label": "Password",
+                "placeholder": "Enter your password"
+            },
+            
+            "button": {
+                "submit": "Sign In",
+                "loading": "Signing in..."
+            }
+        },
+        "validation": {
+            "invalid_email": "Please enter a valid email address.",
+            "password_min": "Password must be at least 8 characters long.",
+            "enterpriseRole": "Please select a role."
+        }
     },
     "DashboardPage": {
         "title": "Dashboard",

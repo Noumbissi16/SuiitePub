@@ -40,7 +40,7 @@ export const routing = defineRouting({
       fr: "/inscription",
     },
     "/signin": {
-      en: "/login",
+      en: "/signin",
       fr: "/connexion",
     },
     "/sms": {

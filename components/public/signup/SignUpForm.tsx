@@ -13,32 +13,46 @@ import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { Input } from "@/components/ui/input";
 import AnimatedButton from "@/components/ui/animated-button";
-import { signUpFormSchema } from "@/lib/public/signup/zodSchema";
+import {
+  getSignUpFormSchema,
+  SignUpFormValues,
+} from "@/lib/public/signup/zodSchema";
 import { useState } from "react";
-import { Link,useRouter } from "@/i18n/navigation";
+import { Link, useRouter } from "@/i18n/navigation";
 import { Eye, EyeClosed } from "lucide-react";
+import { useTranslations } from "next-intl";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const SignUpForm = () => {
-const router = useRouter();
-    const [isSubmitting, setIsSubmitting] = useState(false);
+  const router = useRouter();
+  const t = useTranslations("SignUpPage.signupForm");
+  const tSchema = useTranslations("SignUpPage.validation");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const form = useForm<z.infer<typeof signUpFormSchema>>({
-      resolver: zodResolver(signUpFormSchema),
-      defaultValues: {
-          username: "",
-          email: "",
-          password: "",
-          confirmPassword: "",
-      }
+  const form = useForm<SignUpFormValues>({
+    resolver: zodResolver(getSignUpFormSchema(tSchema)),
+    defaultValues: {
+      username: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+      enterpriseRole: "user",
+    },
   });
 
-  async function onSubmit(values: z.infer<typeof signUpFormSchema>) {
+  async function onSubmit(values: SignUpFormValues) {
     setIsSubmitting(true);
     try {
       console.log(values);
-        await new Promise((resolve) => setTimeout(resolve, 1000));
-        router.push("/dashboard")
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      router.push("/dashboard");
     } catch (error) {
     } finally {
       setIsSubmitting(false);
@@ -52,11 +66,11 @@ const router = useRouter();
           name="username"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-md">Username</FormLabel>
+              <FormLabel className="text-md">{t("username")}</FormLabel>
               <FormControl>
                 <Input
                   className="h-12 max-md:h-14 focus-visible:ring-0"
-                  placeholder="Enter your username"
+                  placeholder={t("username")}
                   {...field}
                   type="text"
                   required
@@ -66,16 +80,17 @@ const router = useRouter();
             </FormItem>
           )}
         />
+
         <FormField
           control={form.control}
           name="email"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-md">Email Address</FormLabel>
+              <FormLabel className="text-md">{t("email")}</FormLabel>
               <FormControl>
                 <Input
                   className="h-12 max-md:h-14 focus-visible:ring-0"
-                  placeholder="Enter your email"
+                  placeholder={t("email")}
                   {...field}
                   type="email"
                   autoComplete="email"
@@ -86,86 +101,112 @@ const router = useRouter();
             </FormItem>
           )}
         />
-        <>
-          <FormField
-            control={form.control}
-            name="password"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="text-md">Password</FormLabel>
-                <FormControl>
-                  <div className="relative">
-                    <Input
-                      className="relative h-12 max-md:h-14 focus-visible:ring-0"
-                      placeholder="Enter a strong password"
-                      {...field}
-                      type={showPassword ? "text" : "password"}
-                      autoComplete="password"
-                      required
-                    ></Input>
-                    <button
-                      type="button"
-                      onClick={() => setShowPassword(!showPassword)}
-                      className="absolute top-[50%] right-4 -translate-y-1/2"
-                    >
-                      {showPassword ? <Eye /> : <EyeClosed />}
-                    </button>
-                  </div>
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </>
-        <>
-          <FormField
-            control={form.control}
-            name="confirmPassword"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel className="text-md">Confirm Password</FormLabel>
-                <FormControl>
-                  <div className="relative">
-                    <Input
-                      className="h-12 max-md:h-14 focus-visible:ring-0"
-                      placeholder="Confirm your password"
-                      {...field}
-                      type={showConfirmPassword ? "text" : "password"}
-                      autoComplete="password"
-                      required
+
+        <FormField
+          control={form.control}
+          name="password"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel className="text-md">{t("password")}</FormLabel>
+              <FormControl>
+                <div className="relative">
+                  <Input
+                    className="relative h-12 max-md:h-14 focus-visible:ring-0"
+                    placeholder={t("password")}
+                    {...field}
+                    type={showPassword ? "text" : "password"}
+                    autoComplete="password"
+                    required
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute top-[50%] right-4 -translate-y-1/2"
+                  >
+                    {showPassword ? <Eye /> : <EyeClosed />}
+                  </button>
+                </div>
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="confirmPassword"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel className="text-md">{t("confirmPassword")}</FormLabel>
+              <FormControl>
+                <div className="relative">
+                  <Input
+                    className="h-12 max-md:h-14 focus-visible:ring-0"
+                    placeholder={t("confirmPassword")}
+                    {...field}
+                    type={showConfirmPassword ? "text" : "password"}
+                    autoComplete="password"
+                    required
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                    className="absolute top-[50%] right-4 -translate-y-1/2"
+                  >
+                    {showConfirmPassword ? <Eye /> : <EyeClosed />}
+                  </button>
+                </div>
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+        <FormField
+          control={form.control}
+          name="enterpriseRole"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel className="text-md">
+                {t("placeholder.enterpriseRoleLabel")}
+              </FormLabel>
+              <FormControl>
+                <Select
+                  onValueChange={field.onChange}
+                  defaultValue={field.value}
+                >
+                  <SelectTrigger className="h-12 max-md:h-14   w-full focus-visible:ring-0">
+                    <SelectValue
+                      placeholder={t("placeholder.enterpriseRoleLabel")}
                     />
-                    <button
-                      type="button"
-                      onClick={() =>
-                        setShowConfirmPassword(!showConfirmPassword)
-                      }
-                      className="absolute top-[50%] right-4 -translate-y-1/2"
-                    >
-                      {showConfirmPassword ? <Eye /> : <EyeClosed />}
-                    </button>
-                  </div>
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </>
+                  </SelectTrigger>
+                  <SelectContent className="w-full">
+                    <SelectItem value="admin">
+                      {t("placeholder.admin")}
+                    </SelectItem>
+                    <SelectItem value="user">
+                      {t("placeholder.user")}
+                    </SelectItem>
+                  </SelectContent>
+                </Select>
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
         <div className="text-sm text-gray-500 my-6">
-          By signing up, I agree to the{" "}
+          {t("privacyNotice")}{" "}
           <Link href="/privacy" className="text-blue-600 hover:underline">
-            Privacy Policy
+            {t("privacyPolicy")}
           </Link>{" "}
-          and{" "}
           <Link href="/terms" className="text-blue-600 hover:underline">
-            Terms of Service
+            {t("termsOfService")}
           </Link>{" "}
-          of Signtaper Technologies FZCO
+          {t("companyName")}
         </div>
-
         <div className="flex items-center justify-between">
           <AnimatedButton
-            btnText={isSubmitting ? "Signing up..." : "Sign Up"}
+            btnText={isSubmitting ? t("submitting") : t("submit")}
             btnType="primary"
             disabled={isSubmitting}
             type="submit"
