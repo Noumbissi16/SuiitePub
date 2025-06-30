@@ -10,17 +10,18 @@ import {
 } from "@/components/ui/form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import * as z from "zod";
 import { Input } from "@/components/ui/input";
 import AnimatedButton from "@/components/ui/animated-button";
 import {
   getSignUpFormSchema,
   SignUpFormValues,
-} from "@/lib/public/signup/zodSchema";
+} from "@/lib/validations/signup/zodSchema";
 import { useState } from "react";
 import { Link, useRouter } from "@/i18n/navigation";
 import { Eye, EyeClosed } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { signUp } from "@/lib/actions/authentication.actions";
+import { toast } from "sonner";
 import {
   Select,
   SelectContent,
@@ -36,6 +37,7 @@ const SignUpForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
   const form = useForm<SignUpFormValues>({
     resolver: zodResolver(getSignUpFormSchema(tSchema)),
     defaultValues: {
@@ -50,14 +52,24 @@ const SignUpForm = () => {
   async function onSubmit(values: SignUpFormValues) {
     setIsSubmitting(true);
     try {
-      console.log(values);
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      router.push("/dashboard");
+      const response = await signUp(
+        values.username,
+        values.email,
+        values.password
+      );
+      if (response.success) {
+        toast.success(response.message);
+        router.push("/dashboard");
+      } else {
+        toast.error(response.message);
+      }
     } catch (error) {
+      toast.error("An error occurred during sign up");
     } finally {
       setIsSubmitting(false);
     }
   }
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">

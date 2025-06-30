@@ -13,14 +13,12 @@ export const getSignUpFormSchema = (t: (key: string) => string) => {
       username: z.string().min(3, {
         message: t("username"),
       }),
-      password: z
-        .string()
-        .min(8, {
-          message: t("passwordLength"),
-        })
-        .regex(passwordRegex, {
-          message: t("passwordFormat"),
-        }),
+      password: z.string().min(8, {
+        message: t("passwordLength"),
+      }),
+      // .regex(passwordRegex, {
+      //   message: t("passwordFormat"),
+      // })
       confirmPassword: z.string().min(8, {
         message: t("confirmPasswordLength"),
       }),

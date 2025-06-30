@@ -14,10 +14,15 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { getSignInFormSchema, SignInFormValues } from "@/lib/public/signin/zodSchema";
+import {
+  getSignInFormSchema,
+  SignInFormValues,
+} from "@/lib/validations/signin/zodSchema";
 import AnimatedButton from "@/components/ui/animated-button";
 import { useRouter } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
+import { signIn } from "@/lib/actions/authentication.actions";
+import { toast } from "sonner";
 
 const SignInForm = () => {
   const router = useRouter();
@@ -37,14 +42,20 @@ const SignInForm = () => {
   async function onSubmit(values: SignInFormValues) {
     setIsSubmitting(true);
     try {
-      console.log(values);
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      router.push("/dashboard");
+      const response = await signIn(values.email, values.password);
+      if (response.success) {
+        toast.success(response.message);
+        router.push("/dashboard");
+      } else {
+        toast.error(response.message);
+      }
     } catch (error) {
+      toast.error("An error occurred during sign in");
     } finally {
       setIsSubmitting(false);
     }
   }
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
